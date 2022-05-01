@@ -1,0 +1,77 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.carousel {
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+.viewport {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: black;
+}
+.slide-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.slide-container > div {
+	width: 100%;
+	height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	animation-name: swipe;
+	animation-duration: 10.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1, 0, 0, 1);
+	z-index: 1;
+	position: absolute;
+	background-color: white;
+}
+
+/* Adding background images */
+.slide-1 {
+	background: url(./assets/homescreenPollution.jpg) no-repeat center center
+		fixed;
+	animation-delay: 3.5s;
+}
+.slide-2 {
+	background: url(./assets/homescreenPollution2.jpg) no-repeat center center
+		fixed;
+	animation-delay: 7s;
+}
+.slide-3 {
+	background: url(./assets/homescreenPollution2.jpg) no-repeat center center
+		fixed;
+	animation-delay: 10.5s;
+}
+
+/* Animation keyframes */
+@keyframes swipe {
+	0% {
+		z-index: 1;
+		will-change: width;
+	}
+	15% {
+		width: 0;
+		visibility: hidden;
+	}
+	30% {
+		z-index: 0;
+		width: 100%;
+	}
+	65.9% {
+		z-index: 0;
+		visibility: hidden;
+	}
+	66% {
+		visibility: visible;
+	}
+}

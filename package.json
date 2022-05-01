@@ -1,0 +1,23 @@
+{
+	"name": "deco3100a3finalassignment",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build-css": "tailwindcss build src/styles.css -o public/styles.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Alton999/Deco3100A3FinalAssignment.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Alton999/Deco3100A3FinalAssignment/issues"
+	},
+	"homepage": "https://github.com/Alton999/Deco3100A3FinalAssignment#readme",
+	"dependencies": {
+		"tailwindcss": "^3.0.24"
+	}
+}
