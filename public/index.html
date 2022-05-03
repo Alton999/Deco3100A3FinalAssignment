@@ -9,8 +9,9 @@
 	</head>
 
 	<body>
-		<header class="h-5v flex flex-row justify-items-start px-20">
-			<h1 class="basis-3/4 my-auto font-bold">
+		<!-- Navigation header showing project information -->
+		<header class="h-5v flex flex-row justify-items-start px-20 bg-white">
+			<h1 class="basis-3/4 my-auto font-bold text-xl">
 				DECO3100 Information Visualisation: Effects of climate change
 			</h1>
 			<div class="basis-1/4 flex flex-row justify-end my-auto">
@@ -20,6 +21,7 @@
 		</header>
 
 		<!-- Inspired from https://www.cssscript.com/responsive-fullscreen-carousel/ -->
+		<!-- Landing section showing images building empathy. Full screen image carousel -->
 		<section class="carousel h-95vh">
 			<div class="viewport">
 				<div class="slide-container">
@@ -34,6 +36,16 @@
 			</div>
 		</section>
 		<!-- Landing section end -->
+
+		<!-- Carbon emissions and sources section -->
+		<main class="bg-slate-500 h-screen">
+			<section class="container mx-auto p-10">
+				<h2 class="text-2xl font-bold font-white">How did we cause this?</h2>
+			</section>
+		</main>
+
+		<!-- Carbon emissions and sources section end-->
+
 		<script src="index.js"></script>
 	</body>
 </html>
