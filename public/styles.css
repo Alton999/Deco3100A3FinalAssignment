@@ -502,6 +502,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.relative {
+  position: relative;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -525,8 +529,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 5vh;
 }
 
+.h-95v {
+  height: 95vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .h-screen {
   height: 100vh;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .basis-3\/4 {
@@ -558,9 +574,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-slate-500 {
+.bg-gray-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 .p-10 {
@@ -570,6 +586,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-xl {
@@ -582,26 +610,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
-.carousel {
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
+.font-extralight {
+  font-weight: 200;
 }
 
-.viewport {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.slide-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .slide-container > div {
@@ -624,21 +648,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* Adding background images */
 
 .slide-1 {
-  background: url(./assets/homescreenPollution.jpg) no-repeat center center
+  /* Photo by Matt Palmer on Unsplash */
+  background: url(./assets/matt-palmer-bushfire.jpg) no-repeat center center
 		fixed;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
 .slide-2 {
-  background: url(./assets/homescreenPollution2.jpg) no-repeat center center
+  background: url(./assets/cyclone_damage.jpeg) no-repeat center center
 		fixed;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
 }
 
 .slide-3 {
-  background: url(./assets/homescreenPollution2.jpg) no-repeat center center
+  background: url(./assets/droughts.jpeg) no-repeat center center
 		fixed;
   -webkit-animation-delay: 9s;
           animation-delay: 9s;

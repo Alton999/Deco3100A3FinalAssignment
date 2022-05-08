@@ -4,21 +4,7 @@
 
 @tailwind utilities;
 
-.carousel {
-	width: 100%;
-	height: 100vh;
-	box-sizing: border-box;
-}
-.viewport {
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-.slide-container {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
+
 .slide-container > div {
 	width: 100%;
 	height: 100%;
@@ -33,21 +19,23 @@
 	z-index: 1;
 	position: absolute;
 	background-color: white;
+
 }
 
 /* Adding background images */
 .slide-1 {
-	background: url(./assets/homescreenPollution.jpg) no-repeat center center
+	/* Photo by Matt Palmer on Unsplash */
+	background: url(./assets/matt-palmer-bushfire.jpg) no-repeat center center
 		fixed;
 	animation-delay: 3s;
 }
 .slide-2 {
-	background: url(./assets/homescreenPollution2.jpg) no-repeat center center
+	background: url(./assets/cyclone_damage.jpeg) no-repeat center center
 		fixed;
 	animation-delay: 6s;
 }
 .slide-3 {
-	background: url(./assets/homescreenPollution2.jpg) no-repeat center center
+	background: url(./assets/droughts.jpeg) no-repeat center center
 		fixed;
 	animation-delay: 9s;
 }
