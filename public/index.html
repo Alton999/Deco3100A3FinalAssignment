@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<title>DECO3100</title>
 	</head>
 
@@ -34,19 +35,68 @@
 					<div class="slide-3"></div>
 				</div>
 			</div>
-
 		</section>
 		<!-- Landing section end -->
 
 		<!-- What is happening in our world? -->
-		<main class="bg-gray-800 h-screen text-white pt-8">
-			<section class="container mx-auto p-10">
-				<p class="text-3xl text-center font-extralight">“The world must come together to confront climate change. There is little scientific dispute that if we do nothing, we will face more drought, famine and mass displacement that will fuel more conflict for decades.” - Barack Obama</p>
+		<main
+			class="bg-gray-800 h-screen text-white pt-8 flex justify-center items-center"
+		>
+			<section class="container mx-auto">
+				<!-- Container for carbon emissions plot and select dropdown -->
+				<section>
+					<div id="carbonProdPlotF"></div>
+					<label
+						for="countriesF"
+						class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+						>Select your country</label
+					>
+					<select
+						id="countriesF"
+						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-6/12 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					>
+						<option>United States</option>
+						<option>Canada</option>
+						<option>France</option>
+						<option>Germany</option>
+					</select>
+					<p class="text-3xl text-center font-extralight p-10">
+						“The world must come together to confront climate change. There is
+						little scientific dispute that if we do nothing, we will face more
+						drought, famine and mass displacement that will fuel more conflict
+						for decades.” - Barack Obama
+					</p>
+				</section>
+
+				<!-- Container for carbon emissions for third world countries -->
+				<section>
+					<div id="carbonProdPlotT"></div>
+					<label
+						for="countriesT"
+						class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+						>Select your country</label
+					>
+					<select
+						id="countriesT"
+						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-6/12 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					>
+						<option>United States</option>
+						<option>Canada</option>
+						<option>France</option>
+						<option>Germany</option>
+					</select>
+					<p class="text-3xl text-center font-extralight p-10">
+						“The world must come together to confront climate change. There is
+						little scientific dispute that if we do nothing, we will face more
+						drought, famine and mass displacement that will fuel more conflict
+						for decades.” - Barack Obama
+					</p>
+				</section>
 			</section>
 		</main>
 
 		<!-- Carbon emissions and sources section end-->
 
-		<script src="index.js"></script>
+		<script src="index.js" type="module"></script>
 	</body>
 </html>
