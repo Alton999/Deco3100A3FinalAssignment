@@ -506,10 +506,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -573,10 +569,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: row;
 }
 
-.content-center {
-  align-content: center;
-}
-
 .items-center {
   align-items: center;
 }
@@ -589,12 +581,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
-.justify-items-start {
-  justify-items: start;
+.justify-around {
+  justify-content: space-around;
 }
 
-.justify-items-center {
-  justify-items: center;
+.justify-items-start {
+  justify-items: start;
 }
 
 .scroll-smooth {
@@ -629,16 +621,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-2\.5 {
   padding: 0.625rem;
 }
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-20 {
@@ -654,18 +646,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-sm {
@@ -673,16 +656,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
-.font-extralight {
-  font-weight: 200;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-extralight {
+  font-weight: 200;
 }
 
 .text-white {
