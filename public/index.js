@@ -10,7 +10,7 @@ const countryTInput = document.getElementById("countriesT");
 
 const loadData = () => {
 	Plotly.d3.csv(emissionsData, (data) => {
-		processEmissionData(data, "Australia", countryTInput.value);
+		processEmissionData(data, "Australia", "Indonesia");
 	});
 };
 
@@ -74,8 +74,8 @@ const makeEmissionsPlotF = (years, co2Prod, country, type, plot) => {
 		},
 		paper_bgcolor: "rgba(0,0,0,0)",
 		plot_bgcolor: "rgba(0,0,0,0)",
-		width: 850,
-		height: 900
+		width: 700,
+		height: 800
 	};
 
 	Plotly.newPlot(plot, traces, layout);
