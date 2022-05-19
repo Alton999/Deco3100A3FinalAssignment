@@ -37,32 +37,41 @@ const processEmissionData = (allRows, country1, country2) => {
 	makeEmissionsPlotF(
 		years,
 		co2ProdCountry1,
+		co2ProdCountry2,
 		country1,
+		country2,
 		"First World",
 		"carbonProdPlotF"
 	);
-	makeEmissionsPlotF(
-		years,
-		co2ProdCountry2,
-		country2,
-		"Third World",
-		"carbonProdPlotT"
-	);
+	// makeEmissionsPlotF(
+	// 	years,
+	// 	co2ProdCountry2,
+	// 	country2,
+	// 	"Third World",
+	// 	"carbonProdPlotT"
+	// );
 };
 
-const makeEmissionsPlotF = (years, co2Prod, country, type, plot) => {
+const makeEmissionsPlotF = (years, co2Prod1, co2Prod2, country1, country2, type, plot) => {
 	let traces = [
 		{
 			type: "scatter",
 			x: years,
-			y: co2Prod,
-			name: "Carbon dioxide production per capita (tonnes per person)",
+			y: co2Prod1,
+			name: country1,
+			mode: "lines+markers"
+		},
+		{
+			type: "scatter",
+			x: years,
+			y: co2Prod2,
+			name: country2,
 			mode: "lines+markers"
 		}
 	];
 
 	let layout = {
-		title: type + ": Annual production of carbon based emissions in " + country,
+		title: type + ": Annual production of carbon based emissions in " + country1,
 		font: {
 			color: "white"
 		},
@@ -74,7 +83,7 @@ const makeEmissionsPlotF = (years, co2Prod, country, type, plot) => {
 		},
 		paper_bgcolor: "rgba(0,0,0,0)",
 		plot_bgcolor: "rgba(0,0,0,0)",
-		width: 700,
+		width: 1500,
 		height: 800
 	};
 
