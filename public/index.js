@@ -1,5 +1,14 @@
 // import "./components/carbonEmissionGraph";
 
+const newAnimation = document.getElementById("animationHere");
+const animation = bodymovin.loadAnimation({
+	container: newAnimation,
+	renderer: "svg",
+	loop: true,
+	autoplay: true,
+	path: "data.json"
+});
+
 const energyData =
 	"https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv";
 const emissionsData =
@@ -16,15 +25,15 @@ const loadData = () => {
 
 const processEmissionData = (allRows, country1, country2) => {
 	// Initialise empty arrays to store individual values
-	let yearsC1= [],
-		yearsC2= [],
+	let yearsC1 = [],
+		yearsC2 = [],
 		yearsG = [],
 		co2ProdCountry1 = [],
 		co2ProdCountry2 = [],
 		co2ProdWorld = [];
 
 	// Initialise variables
-	const startingYear = 1900
+	const startingYear = 1900;
 	for (let i = 0; i < allRows.length; i++) {
 		let row = allRows[i];
 
@@ -33,18 +42,17 @@ const processEmissionData = (allRows, country1, country2) => {
 			co2ProdCountry1.push(row["co2"]);
 		}
 		if (parseInt(row["year"]) >= startingYear && row["country"] === country2) {
-			yearsC2.push(row["year"])
+			yearsC2.push(row["year"]);
 			co2ProdCountry2.push(row["co2"]);
 		}
-		if(parseInt(row["year"]) >= startingYear && row["country"] === "World"){
-			yearsG.push(row["year"])
+		if (parseInt(row["year"]) >= startingYear && row["country"] === "World") {
+			yearsG.push(row["year"]);
 			co2ProdWorld.push(row["co2"]);
 		}
 	}
 
-
 	// console.log("Years:", years)
-	console.log(allRows.length)
+	console.log(allRows.length);
 	console.log("Information processed");
 	makeEmissionsPlot(
 		yearsC1,
@@ -57,16 +65,17 @@ const processEmissionData = (allRows, country1, country2) => {
 		"carbonProdPlotF"
 	);
 	makeWorldEmissionsPlot(yearsG, co2ProdWorld, "worldCarbonEmissionsGraph");
-
 };
 const makeWorldEmissionsPlot = (years, co2Prod, plot) => {
-	let traces = [{
-		type: "scatter",
-		x: years,
-		y: co2Prod,
-		name: "Global carbon emissions",
-		mode: "lines+markers"
-	}]
+	let traces = [
+		{
+			type: "scatter",
+			x: years,
+			y: co2Prod,
+			name: "Global carbon emissions",
+			mode: "lines+markers"
+		}
+	];
 	let layout = {
 		title: "Global emissions of carbon dioxide",
 		font: {
@@ -82,10 +91,19 @@ const makeWorldEmissionsPlot = (years, co2Prod, plot) => {
 		plot_bgcolor: "rgba(0,0,0,0)",
 		width: 1500,
 		height: 800
-	}
+	};
 	Plotly.newPlot(plot, traces, layout);
-}
-const makeEmissionsPlot = (yearsC1, yearsC2, co2Prod1, co2Prod2, country1, country2, type, plot) => {
+};
+const makeEmissionsPlot = (
+	yearsC1,
+	yearsC2,
+	co2Prod1,
+	co2Prod2,
+	country1,
+	country2,
+	type,
+	plot
+) => {
 	let traces = [
 		{
 			type: "scatter",
@@ -104,7 +122,8 @@ const makeEmissionsPlot = (yearsC1, yearsC2, co2Prod1, co2Prod2, country1, count
 	];
 
 	let layout = {
-		title: type + ": Annual production of carbon based emissions in " + country1,
+		title:
+			type + ": Annual production of carbon based emissions in " + country1,
 		font: {
 			color: "white"
 		},

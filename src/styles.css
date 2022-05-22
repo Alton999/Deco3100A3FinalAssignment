@@ -4,7 +4,10 @@
 
 @tailwind utilities;
 
-
+.animationContainer {
+	width: 100%;
+	height: auto;
+}
 
 .slide-container > div {
 	width: 100%;
@@ -20,7 +23,6 @@
 	z-index: 1;
 	position: absolute;
 	background-color: white;
-
 }
 
 /* Adding background images */
@@ -31,13 +33,11 @@
 	animation-delay: 3s;
 }
 .slide-2 {
-	background: url(./assets/cyclone_damage.jpeg) no-repeat center center
-		fixed;
+	background: url(./assets/cyclone_damage.jpeg) no-repeat center center fixed;
 	animation-delay: 6s;
 }
 .slide-3 {
-	background: url(./assets/droughts.jpeg) no-repeat center center
-		fixed;
+	background: url(./assets/droughts.jpeg) no-repeat center center fixed;
 	animation-delay: 9s;
 }
 
