@@ -1,12 +1,13 @@
 // import "./components/carbonEmissionGraph";
 
+// Greenhouse gas animation player
 const newAnimation = document.getElementById("animationHere");
 const animation = bodymovin.loadAnimation({
 	container: newAnimation,
 	renderer: "svg",
 	loop: true,
 	autoplay: true,
-	path: "data.json"
+	path: "dataGHG.json"
 });
 
 const energyData =
@@ -19,7 +20,7 @@ const countryTInput = document.getElementById("countriesT");
 
 const loadData = () => {
 	Plotly.d3.csv(emissionsData, (data) => {
-		processEmissionData(data, "Australia", "Philippines");
+		processEmissionData(data, "United States", "Philippines");
 	});
 };
 
@@ -54,6 +55,7 @@ const processEmissionData = (allRows, country1, country2) => {
 	// console.log("Years:", years)
 	console.log(allRows.length);
 	console.log("Information processed");
+
 	makeEmissionsPlot(
 		yearsC1,
 		yearsC2,
@@ -64,6 +66,7 @@ const processEmissionData = (allRows, country1, country2) => {
 		"First World",
 		"carbonProdPlotF"
 	);
+
 	makeWorldEmissionsPlot(yearsG, co2ProdWorld, "worldCarbonEmissionsGraph");
 };
 const makeWorldEmissionsPlot = (years, co2Prod, plot) => {
