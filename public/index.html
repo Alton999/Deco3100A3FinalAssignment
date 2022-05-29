@@ -116,7 +116,7 @@
 				</section>
 				<!-- Section for animation explaining the greenhouse effect -->
 				<section class="flex justify-center flex-col grow col-span-5 mb-5">
-					<div id="animationHere"></div>
+					<div id="GHG-animation"></div>
 					<div class="flex justify-center mt-4">
 						<p class="w-8/12 text-gray-400">
 							Informative animation explaining how ozone layers affect climate
@@ -272,35 +272,286 @@
 				</div>
 			</section>
 			<section class="container mx-auto">
-				<hr class="my-16" />
-				<p class="text-2xl font-bold mb-1">
-					Compare the differences in carbon emission trends between developed
-					and developing countries.
-				</p>
+				<section class="container mx-auto my-16 py-7 bg-orange-600">
+					<h1 class="text-5xl text-center uppercase">Is all hope lost?</h1>
+				</section>
+				<section class="container mx-auto">
+					<p class="text-lg my-3">
+						In order to further understand how modern countries are tackling
+						these issues further understanding of how each country is producing
+						these global emissions.
+					</p>
+				</section>
 			</section>
+
 			<section
 				class="flex flex-row justify-around items-center container mx-auto mb-12"
 			>
-				<!-- Container for carbon emissions plot and select dropdown -->
-
-				<section>
-					<div id="carbonProdPlotF"></div>
-					<label
-						for="countriesF"
-						class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-100"
-						>Select developed country</label
-					>
-					<select
-						id="countriesF"
-						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-					>
-						<option>United States</option>
-						<option>Canada</option>
-						<option>France</option>
-						<option>Germany</option>
-					</select>
-				</section>
+				<!-- Container for first world carbon emissions plot -->
+				<div id="carbonProdPlot"></div>
+				<!-- Carbon emissions for third world countries -->
+				<div id="gdpPlot"></div>
 			</section>
+			<section class="container mx-auto my-8">
+				<p class="mb-2 text-lg font-medium text-gray-100 text-center">
+					Top 20 developed countries in terms of GDP.
+				</p>
+				<!-- Grid component containing  -->
+				<div class="grid grid-cols-6 gap-5">
+					<div class="grid grid-cols-5 gap-5 w-full col-span-5">
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="United States"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="United States"
+								id="United States"
+							/>1. United States
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="China"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="China"
+								id="China"
+							/>2. China
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Japan"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Japan"
+								id="Japan"
+							/>3. Japan
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Germany"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Germany"
+								id="Germany"
+							/>4. Germany
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="United Kingdom"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="United Kingdom"
+								id="United Kingdom"
+							/>5. United Kingdom
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="India"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="India"
+								id="India"
+							/>6. India
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="France"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="France"
+								id="France"
+							/>7. France
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Italy"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Italy"
+								id="Italy"
+							/>8. Italy
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Canada"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Canada"
+								id="Canada"
+							/>9. Canada
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="South Korea"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="South Korea"
+								id="South Korea"
+							/>10. South Korea
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Russia"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Russia"
+								id="Russia"
+							/>11. Russia
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Brazil"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Brazil"
+								id="Brazil"
+							/>12. Brazil
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Australia"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Australia"
+								id="Australia"
+								checked
+							/>13. Australia
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Spain"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Spain"
+								id="Spain"
+							/>14. Spain
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Indonesia"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Indonesia"
+								id="Indonesia"
+							/>15. Indonesia
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Mexico"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Mexico"
+								id="Mexico"
+							/>16. Mexico
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Netherlands"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Netherlands"
+								id="Netherlands"
+							/>17. Netherlands
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Switzerland"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Switzerland"
+								id="Switzerland"
+							/>18. Switzerland
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Saudi Arabia"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Saudi Arabia"
+								id="Saudi Arabia"
+							/>19. Saudi Arabia
+						</label>
+						<label
+							class="flex font-bold justify-start items-center px-5 py-2 bg-slate-300 bg-opacity-25 text-md rounded-lg"
+							for="Turkey"
+						>
+							<input
+								class="mr-5"
+								type="checkbox"
+								name="developedCountry"
+								value="Turkey"
+								id="Turkey"
+							/>20. Turkey
+						</label>
+					</div>
+					<div class="flex justify-center row-span-1">
+						<button
+							class="w-4/5 bg-slate-300 bg-opacity-25 hover:bg-slate-900 py-3 rounded-lg text-2xl font-bold"
+							id="checkFirstWorld"
+						>
+							Compare
+						</button>
+					</div>
+				</div>
+			</section>
+
 			<section class="container mx-auto">
 				<p>
 					Notice that many developed countries are doing an effective job in
