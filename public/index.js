@@ -11,7 +11,6 @@ const emissionsData =
 	"https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv";
 
 const checkFirstWorldButton = document.getElementById("checkFirstWorld");
-const checkThirdWorldButton = document.getElementById("checkThirdWorld");
 
 let developedCountries;
 let developingCountries;
@@ -51,14 +50,6 @@ checkFirstWorldButton.addEventListener("click", (e) => {
 	});
 });
 
-// checkThirdWorldButton.addEventListener("click", (e) => {
-// 	e.preventDefault();
-// 	developingCountries = checkCheckboxes("developing");
-// 	Plotly.d3.csv(emissionsData, (data) => {
-// 		processCountriesEmissions(data, developingCountries, "carbonProdPlotT");
-// 	});
-// });
-
 const loadData = () => {
 	developedCountries = checkCheckboxes("developed");
 	developingCountries = checkCheckboxes("developing");
@@ -70,7 +61,6 @@ const loadData = () => {
 			"carbonProdPlot",
 			"gdpPlot"
 		);
-		// processCountriesEmissions(data, developingCountries, "carbonProdPlotT");
 	});
 };
 
@@ -104,13 +94,15 @@ const processCountriesEmissions = (
 			type: "scatter",
 			name: country,
 			x: tempYears,
-			y: tempCO2Values
+			y: tempCO2Values,
+			fill: "tozeroy"
 		};
 		tempGDPObj = {
 			type: "scatter",
 			name: country,
 			x: tempYears,
-			y: tempGDPValues
+			y: tempGDPValues,
+			fill: "tozeroy"
 		};
 		tracesGDP.push(tempGDPObj);
 		tracesCO2.push(tempObjCO2);
