@@ -18,6 +18,7 @@
 	},
 	"homepage": "https://github.com/Alton999/Deco3100A3FinalAssignment#readme",
 	"dependencies": {
+		"firebase-tools": "^12.3.1",
 		"tailwindcss": "^3.0.24"
 	}
 }
